@@ -1,0 +1,11 @@
+# Multi-Agent AI Research System
+Orchestrate multiple specialized AI agents that work together as a pipeline searching the web, scraping content, writing reports, and reviewing them automatically
+
+- Multi-agent pipeline with LangChain
+- Search Agent that retrieves live, reliable web data
+- Reader Agent that scrapes and extracts deep content from URLs
+- Writer Chains to generate structured, detailed research reports
+- Critic Chains to automatically review and score AI-generated output
+- Shared pipeline where agents pass state to each other through 
+- Streamlit UI for the multi-agent system
+

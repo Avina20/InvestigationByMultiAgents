@@ -22,3 +22,15 @@ def web_search(query: str) -> str:
 
 #print(web_search.invoke("whats the recent news on war in iran"))
 
+@tool
+def scrape_url(url: str) -> str:
+    """ Scrape the content of a given URL and return the clean text content for deeper reading. """
+    try:
+        response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'}, timeout=10)
+        soup = BeautifulSoup(response.text, 'html.parser')
+        for tag in soup(['script', 'style', 'footer', 'nav']):
+            tag.decompose()
+        return soup.get_text(separator=' ', strip=True)
+    except requests.exceptions.RequestException as e:
+        return f"Error fetching the URL: {e}"
+
