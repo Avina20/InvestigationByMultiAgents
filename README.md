@@ -62,4 +62,4 @@ python pipeline.py
 ```
 
 
-![alt text](<ss investigation.png>)
+![Screenshot of the Streamlit app](ss%20investigation.png)
